@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Test {
 
     //1 задание
@@ -12,23 +14,27 @@ public class Test {
     }
 
     //2 задание
-    static int[] fillList(){
-        int[] array = new int[8];
-        for(int i = 0, j = 0; i < array.length; i++, j+=3)
-            array[i] = j;
-        return array;
+    static int[] fillMassive(){
+        int[] scnArray = new int[8];
+        for (int i = 0, j = 0; i < scnArray.length; i++, j += 3)
+            scnArray[i] = j;
+        return scnArray;
     }
 
     //3 задание
-    static int[] fillArray(int[] array) {
-        for (int i = 0; i < array.length; i++)
-            if (array[i] < 6)
-                array[i] *= 2;
-        return array;
+    static int[] anotherMassive(){
+        int[] fullNum = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        for (int i = 0; i < fullNum.length; i++){
+            if(fullNum[i] < 6){
+                fullNum[i] *=2;
+            }
+        }
+        return fullNum;
     }
 
-    public static void main(String []args){
-        proverka(5,6);
-        fillList();
+    public static void main (String []args){
+        System.out.println(proverka(5,6));
+        System.out.println(Arrays.toString(fillMassive()));
+        System.out.println(Arrays.toString(anotherMassive()));
     }
 }
